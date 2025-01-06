@@ -1,0 +1,375 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+}
+
+header {
+    background: #00796b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: #004d40;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('https://source.unsplash.com/1600x900/?technology,developer') no-repeat center/cover;
+    color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero a, .hero img {
+    position: relative;
+    z-index: 2;
+}
+
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: slideUp 2s ease;
+}
+
+.hero a {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero a:hover {
+    background: #004d40;
+    transform: scale(1.1);
+}
+
+.about, .projects, .contact, .education, .skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00796b;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00bcd4;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.education-item, .skills ul {
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.projects .grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projects .card {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.projects .card:hover {
+    transform: translateY(-10px);
+}
+
+.projects .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+.projects .card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #004d40;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+.education {
+    background-color: #f0f8ff;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 5px solid #00796b;
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00796b;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+.education h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00bcd4;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.education-item {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+.education-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Technical Skills Section */
+.skills {
+    background-color: #e0f7fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00796b;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+.skills h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00bcd4;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.skills ul li {
+    font-size: 1.2rem;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations for Education and Technical Sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation to education and skills */
+.education-item, .skills ul li {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-item, .skills ul li {
+        width: 100%;
+    }
+}
